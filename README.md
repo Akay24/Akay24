@@ -14,9 +14,6 @@
 ### 💬 Let's Connect!
 - I’m passionate about **machine learning**. Feel free to reach out if you want to discuss ideas, projects, or collaborate!
 
-### 📫 Reach Out
--  Email me at **[akayroot56@gmail.com](mailto:akayroot56@gmail.com)**
-
 ### ⚡ fun fact
 - **I’d agree with you, but then we’d both be wrong.**
 
