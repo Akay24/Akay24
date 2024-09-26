@@ -17,16 +17,6 @@
 ### ⚡ fun fact
 - **I’d agree with you, but then we’d both be wrong.**
 
---- 
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/" height="30" width="40" /></a>
-<a href="mailto:abhijeetmishra2410@gmail.com" target="_blank">
-  <img align="center" src="https://img.icons8.com/?size=48&id=OumT4lIcOllS&format=png" alt="Email" height="43" width="40" />
-</a>
-</p>
-
 -----
 
 <h3 align="center">Languages and Tools:</h3>
@@ -139,13 +129,22 @@
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="60" height="60"/> 
   </a> 
-   
-  
-</p>
-
 
 ---
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=akay24&show_icons=true&locale=en&layout=compact" alt="akay24" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=akay24&" alt="akay24" /></p>
+
+  --- 
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/" height="30" width="40" /></a>
+<a href="mailto:abhijeetmishra2410@gmail.com" target="_blank">
+  <img align="center" src="https://img.icons8.com/?size=48&id=OumT4lIcOllS&format=png" alt="Email" height="43" width="40" />
+</a>
+</p>
+  
+</p>
+
