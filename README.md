@@ -209,7 +209,7 @@ class AbhijeetMishra implements Developer {
 
 <a href="https://github.com/piyushsuthar/github-readme-quotes"><img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=synthwave" alt="Quote"/></a>
 
-**"I'd agree with you, but then we'd both be wrong."** _(Classic Abhijeet 😄)_
+**"I'd agree with you, but then we'd both be wrong."** 
 
 ---
 
