@@ -13,10 +13,13 @@
 [![Email](https://img.shields.io/badge/Email-abhijeetmishra2410%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abhijeetmishra2410@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Akay24-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Akay24)
 
-<br/><br/>
+</div>
 
-Backend Software Engineer specializing in **agentic AI systems** and **production backend infrastructure**.<br/>
-Architecting multi-agent orchestration pipelines (LangGraph, Amazon Bedrock, Pinecone RAG), shipping high-uptime REST microservices in Python & Node.js on AWS, and publishing open-source developer tooling on PyPI.
+<br/>
+
+<div align="justify">
+
+Backend Software Engineer specializing in **agentic AI systems** and **production backend infrastructure**. My work centers on architecting multi-agent automation pipelines (LangGraph, Amazon Bedrock, Pinecone RAG), shipping high-uptime microservices in Python and Node.js on AWS, and engineering developer tooling. I am the author of [**reportkit-py**](https://pypi.org/project/reportkit-py/), an open-source OOXML document rendering engine published on PyPI.
 
 </div>
 
@@ -72,11 +75,15 @@ Architecting multi-agent orchestration pipelines (LangGraph, Amazon Bedrock, Pin
 ### 🤖 [CodeSentinel](https://github.com/Akay24)
 <sub>Autonomous Coding & Verification Agent</sub>
 
-An agentic system engineered to autonomously resolve GitHub issues. Ingests issues, retrieves codebase context via vector search, generates patches using **LangGraph + Claude on Amazon Bedrock**, and executes a generate-verify-repair loop inside an isolated Docker sandbox.
+<div align="justify">
 
-* **Generate-Verify-Repair Loop:** Iterates on test suite failures before emitting a final human-reviewed pull request.
-* **Safety First:** Strict human-in-the-loop design — never auto-merges by design.
-* **Deterministic Telemetry:** Detailed step-by-step diagnostic reports with execution logs.
+An agentic automation system engineered to resolve GitHub issues with strict safety boundaries. Ingests issue descriptions, retrieves codebase context via vector search, generates patches using <b>LangGraph + Claude on Amazon Bedrock</b>, and executes an automated generate-verify-repair loop inside an isolated Docker sandbox.
+
+</div>
+
+* **Deterministic Verification Loop:** Iterates on unit test and lint failures inside the container before generating a PR.
+* **Safety By Design:** Strict human-in-the-loop requirement — never auto-merges patches into branches.
+* **Execution Telemetry:** Emits structured step-by-step diagnostic reports with execution logs and coverage diffs.
 
 <br/>
 
@@ -91,11 +98,15 @@ An agentic system engineered to autonomously resolve GitHub issues. Ingests issu
 ### 📦 [reportkit-py](https://github.com/Akay24/reportkit-py)
 <sub>HTML/Nunjucks → DOCX/PDF Engine (PyPI Published)</sub>
 
-Production Python package built to eliminate costly third-party rendering APIs. Converts HTML/Nunjucks templates directly into Microsoft Word documents with **native, editable Office XML charts** (not flat raster images), with built-in DOCX-to-PDF conversion.
+<div align="justify">
 
-* **Native Office XML:** Injects real OpenXML chart definitions directly into the document package.
-* **Dual Interface:** Consumable as a lightweight Python library or run as a standalone Flask REST microservice.
-* **Production Grade:** Full CI/CD packaging, versioning, automated test suite, and published on PyPI.
+Production Python package built to eliminate costly third-party rendering APIs and bloated headless browsers. Converts HTML/Nunjucks templates directly into Microsoft Word documents with <b>native, editable Office XML charts</b> (not rasterized images), paired with automated DOCX-to-PDF conversion.
+
+</div>
+
+* **Native OpenXML Pipeline:** Directly manipulates the underlying WordProcessingML package for lightweight execution.
+* **Footprint Optimization:** Slashes memory footprint from ~800MB (headless Chromium) to <80MB per worker process.
+* **Dual Deployment Model:** Consumable as a lightweight library or deployed as a containerized Flask REST microservice.
 
 <br/>
 
@@ -112,11 +123,15 @@ Production Python package built to eliminate costly third-party rendering APIs. 
 ### ♟️ [TwentyFish](https://github.com/Akay24/Chess-Engine)
 <sub>Calibrated Chess Engine & Analysis Platform</sub>
 
-A high-performance chess application featuring **20 granular difficulty levels**, each calibrated to ~200 Elo intervals using UCI parameter tuning (Skill Level, Depth, Error Rate, and time handicaps) powered by Stockfish compiled to WebAssembly.
+<div align="justify">
 
-* **Non-Blocking Architecture:** Offloads Stockfish WASM execution to dedicated Web Workers, preserving a smooth 60fps UI.
-* **Full Tournament Kit:** Dynamic live evaluation bar, interactive move tree, PGN import/export, and opening book integration.
-* **End-to-End Reliability:** Comprehensive test suite built with Playwright covering move legality and engine responses.
+A full-stack chess platform featuring <b>20 granular difficulty levels</b>, each calibrated to ~200 Elo intervals using UCI parameter tuning (Skill Level, Depth, Error Rate, and time handicaps) powered by Stockfish compiled to WebAssembly.
+
+</div>
+
+* **Non-Blocking Worker Architecture:** Offloads Stockfish WASM minimax tree search to dedicated Web Workers, preserving a smooth 60fps UI thread.
+* **Full Analysis Suite:** Live dynamic evaluation bar, interactive move tree exploration, PGN export, and opening book integration.
+* **Automated Test Suite:** Comprehensive end-to-end test suite built with Playwright covering engine state and move legality.
 
 <br/>
 
@@ -131,11 +146,15 @@ A high-performance chess application featuring **20 granular difficulty levels**
 ### 🌐 [SCVRI](https://github.com/Akay24/SCVRI)
 <sub>Supply Chain Visibility & Risk Intelligence</sub>
 
-Enterprise platform aggregating global supplier networks, shipment milestones, and external risk feeds into an actionable triage command center. Employs ML scoring models to predict supply chain disruptions before bottlenecks propagate.
+<div align="justify">
 
-* **Microservice Topology:** Decoupled FastAPI backend handling ingestion pipelines and real-time geospatial calculations.
-* **Real-Time Data Tier:** PostgreSQL for relational supplier graphs paired with Redis for low-latency session and alert caching.
-* **Executive Dashboard:** Next.js reactive frontend with interactive geospatial mapping and multi-tier alert triage workflows.
+Enterprise platform aggregating global supplier networks, shipment tracking events, and external disruption feeds into an actionable triage command center. Employs ML risk models to predict supply chain bottlenecks before disruptions propagate.
+
+</div>
+
+* **Decoupled Microservice Topology:** FastAPI backend isolates high-frequency external feed ingestion from customer-facing query endpoints.
+* **Dual-Tier Data Layer:** PostgreSQL for relational supplier graphs paired with Redis for low-latency session and alert caching.
+* **Geospatial Command Center:** Next.js reactive frontend with interactive geospatial mapping and multi-tier alert triage workflows.
 
 <br/>
 
@@ -147,6 +166,19 @@ Enterprise platform aggregating global supplier networks, shipment milestones, a
 </td>
 </tr>
 </table>
+
+<br/>
+
+## ◈ Engineering Principles & System Design
+
+<div align="justify">
+
+* **Deterministic Verification Over Generative Guesswork:** Large language models propose modifications; isolated compilers, test runners, and linters deterministically verify them in ephemeral environments before human review.
+* **Lean Runtime Footprints:** Avoid heavy runtime dependencies (e.g. headless browsers) where native protocols or direct binary formats (e.g. OpenXML) accomplish the objective with 10x lower memory overhead.
+* **Decoupled Compute Topologies:** Keep long-running or CPU-intensive workloads (WASM minimax engines, batch document rendering, vector search) off critical request and UI threads via asynchronous workers and background queues.
+* **Defensive API Boundaries:** Enforce strict contract validation, structured audit trails, and least-privilege access patterns across all microservice boundaries.
+
+</div>
 
 <br/>
 
