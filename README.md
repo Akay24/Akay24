@@ -225,12 +225,12 @@ Enterprise platform aggregating global supplier networks, shipment milestones, a
 ---
 
 <div align="center">
-<sub>
 
 *"Reliability is not an accident of good intentions; it is the deliberate output of verifiable feedback loops."*
 
-<b>Abhijeet Mishra</b> · Software Development Engineer · Bhubaneswar, India 🇮🇳  
-Engineering agentic pipelines, distributed systems, and verifiable software.
+<br/><br/>
 
-</sub>
+**Abhijeet Mishra** · Software Development Engineer · Bhubaneswar, India 🇮🇳<br/>
+<sub>Engineering agentic pipelines, distributed systems, and verifiable software.</sub>
+
 </div>
