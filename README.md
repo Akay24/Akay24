@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=c9d1d9&descAlignY=62" alt="Header" width="100%"/>
 
 <a href="https://readme-typing-svg.demolab.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1200&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Software+Engineer+%40+Spotline;Agentic+AI+Pipelines+(LangGraph+%2B+Amazon+Bedrock);Author+of+reportkit-py+(Published+on+PyPI);Building+CodeSentinel+(Autonomous+Coding+Agent);Distributed+Systems+%C2%B7+High-Throughput+APIs" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1200&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Software+Development+Engineer;Agentic+AI+Pipelines+(LangGraph+%2B+Amazon+Bedrock);Author+of+reportkit-py+(Published+on+PyPI);Building+CodeSentinel+(Autonomous+Coding+Agent);Distributed+Systems+%C2%B7+High-Throughput+APIs" alt="Typing SVG" />
 </a>
 
 <br/>
@@ -22,8 +22,8 @@ $ cat engineer_manifest.yml
 engineer:
   name: "Abhijeet Mishra"
   role: "Backend Software Development Engineer"
-  org: "Spotline Software Solutions"
-  specialization: "Agentic AI Systems, Multi-Agent Orchestration & High-Throughput Backends"
+  focus: "Agentic AI Systems, Multi-Agent Orchestration & High-Throughput Backends"
+  location: "India 🇮🇳"
   
 production_impact:
   - "Engineered multi-agent automation pipelines (Amazon Bedrock, Mistral, Claude, Pinecone RAG)"
@@ -65,9 +65,9 @@ core_tenets:
 </tr>
 <tr>
 <td><img src="https://img.shields.io/badge/Production-007ACC?style=flat-square" alt="Production"/></td>
-<td><b>Agentic RAG Pipeline</b></td>
-<td>Multi-agent enterprise pipeline at Spotline: Pinecone vector search, automated Playwright screenshot triage, automated reports</td>
-<td align="right"><code>Spotline Core</code></td>
+<td><b>Enterprise Agentic Pipeline</b></td>
+<td>Multi-agent automation system: Pinecone vector search, automated Playwright screenshot triage, automated report generation</td>
+<td align="right"><code>Enterprise System</code></td>
 </tr>
 <tr>
 <td><img src="https://img.shields.io/badge/Interactive-9cf?style=flat-square" alt="Interactive"/></td>
