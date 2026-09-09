@@ -1,100 +1,165 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:161b22,100:0d1117&height=150&section=header&text=Abhijeet%20Mishra&fontSize=38&fontColor=e6edf3&fontAlignY=50&desc=Software%20Engineer%20·%20Full-Stack%20·%20Backend%20Systems%20·%20AI/ML&descSize=14&descColor=8b949e&descAlignY=72&animation=fadeIn" alt="Header" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=c9d1d9&descAlignY=62" alt="Header" width="100%"/>
+
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1200&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Software+Engineer+%40+Spotline;Agentic+AI+Pipelines+(LangGraph+%2B+Amazon+Bedrock);Author+of+reportkit-py+(Published+on+PyPI);Building+CodeSentinel+(Autonomous+Coding+Agent);Distributed+Systems+%C2%B7+High-Throughput+APIs" alt="Typing SVG" />
+</a>
 
 <br/>
 
-I build backend-heavy products, developer tools, and full-stack platforms<br/>
-primarily in **Python** and **TypeScript**.<br/>
-Most of my work sits at the intersection of distributed systems, data-intensive applications, and thoughtful UI.
-
-<br/>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abhijeetmishra2410@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Akay24)
+[![PyPI](https://img.shields.io/pypi/v/reportkit-py?label=PyPI%3A%20reportkit-py&color=3776AB&style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/reportkit-py/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeet-mishra-76bb7a204/)
+[![Email](https://img.shields.io/badge/Email-abhijeetmishra2410%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abhijeetmishra2410@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Akay24-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Akay24)
 
 </div>
 
 <br/>
 
-## ◈ Currently Building
+```yaml
+$ cat engineer_manifest.yml
+engineer:
+  name: "Abhijeet Mishra"
+  role: "Backend Software Development Engineer"
+  org: "Spotline Software Solutions"
+  specialization: "Agentic AI Systems, Multi-Agent Orchestration & High-Throughput Backends"
+  
+production_impact:
+  - "Engineered multi-agent automation pipelines (Amazon Bedrock, Mistral, Claude, Pinecone RAG)"
+  - "Automated script-to-execution-to-report lifecycles with sandboxed test runs & Playwright telemetry"
+  - "Published author of reportkit-py (open-source HTML/Nunjucks → DOCX/PDF OOXML engine on PyPI)"
+  - "Architected high-uptime REST microservices on AWS (EC2, S3, Lambda) with Docker & Jenkins CI/CD"
 
-| | Project | Description |
-|---|---|---|
-| 🏗️ | **[SCVRI](https://github.com/Akay24/SCVRI)** | Enterprise supply chain risk platform — microservices, ML-powered risk scoring, real-time supplier visibility |
-| 📦 | **[reportkit](https://github.com/Akay24/reportkit-py)** | Open-source Python library for HTML → production-quality DOCX/PDF with native Office charts |
-| ♟️ | **[TwentyFish](https://github.com/Akay24/Chess-Engine)** | Chess platform with 20 Stockfish-calibrated difficulty levels (~200 Elo apart), built on Next.js + WASM |
+core_tenets:
+  - "Deterministic execution over probabilistic guesswork"
+  - "Resilient sandboxing and rigorous verification loops"
+  - "Zero unnecessary runtime dependencies"
+```
 
 <br/>
 
-## ◈ Featured Projects
+## ◈ Active Engineering Pipeline
+
+<table>
+<thead>
+<tr>
+<th align="left">Status</th>
+<th align="left">Project / Initiative</th>
+<th align="left">Core Architecture & Focus</th>
+<th align="right">Target / Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://img.shields.io/badge/In%20Progress-FFA500?style=flat-square" alt="In Progress"/></td>
+<td><b>CodeSentinel</b></td>
+<td>Autonomous coding agent: generates RAG-grounded diffs with LangGraph & Claude on Bedrock, verified in isolated test sandboxes</td>
+<td align="right"><code>Agentic AI</code></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/PyPI%20Live-brightgreen?style=flat-square" alt="PyPI Live"/></td>
+<td><b><a href="https://github.com/Akay24/reportkit-py">reportkit-py</a></b></td>
+<td>Lightweight Python library: parses HTML/Nunjucks into DOCX with native editable Office charts and DOCX-to-PDF pipeline</td>
+<td align="right"><a href="https://pypi.org/project/reportkit-py/"><code>pip install</code> ↗</a></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Production-007ACC?style=flat-square" alt="Production"/></td>
+<td><b>Agentic RAG Pipeline</b></td>
+<td>Multi-agent enterprise pipeline at Spotline: Pinecone vector search, automated Playwright screenshot triage, automated reports</td>
+<td align="right"><code>Spotline Core</code></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Interactive-9cf?style=flat-square" alt="Interactive"/></td>
+<td><b><a href="https://github.com/Akay24/Chess-Engine">TwentyFish</a></b></td>
+<td>Chess platform featuring 20 Stockfish-calibrated difficulty tiers (~200 Elo steps) via WASM in dedicated Web Workers</td>
+<td align="right"><a href="https://github.com/Akay24/Chess-Engine"><code>Source</code> ↗</a></td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+## ◈ Featured Architecture Showcases
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-<h3><a href="https://github.com/Akay24/SCVRI">SCVRI</a></h3>
+### 🤖 [CodeSentinel](https://github.com/Akay24)
+<sub>Autonomous Coding & Verification Agent</sub>
 
+An agentic system engineered to autonomously resolve GitHub issues. Ingests issues, retrieves codebase context via vector search, generates patches using **LangGraph + Claude on Amazon Bedrock**, and executes a generate-verify-repair loop inside an isolated Docker sandbox.
+
+* **Generate-Verify-Repair Loop:** Iterates on test suite failures before emitting a final human-reviewed pull request.
+* **Safety First:** Strict human-in-the-loop design — never auto-merges by design.
+* **Deterministic Telemetry:** Detailed step-by-step diagnostic reports with execution logs.
+
+<br/>
+
+![LangGraph](https://img.shields.io/badge/LangGraph-000000?style=flat-square&logo=diagram-project&logoColor=white)
+![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![Claude 3.5](https://img.shields.io/badge/Claude-D97706?style=flat-square&logo=anthropic&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker_Sandbox-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 📦 [reportkit-py](https://github.com/Akay24/reportkit-py)
+<sub>HTML/Nunjucks → DOCX/PDF Engine (PyPI Published)</sub>
+
+Production Python package built to eliminate costly third-party rendering APIs. Converts HTML/Nunjucks templates directly into Microsoft Word documents with **native, editable Office XML charts** (not flat raster images), with built-in DOCX-to-PDF conversion.
+
+* **Native Office XML:** Injects real OpenXML chart definitions directly into the document package.
+* **Dual Interface:** Consumable as a lightweight Python library or run as a standalone Flask REST microservice.
+* **Production Grade:** Full CI/CD packaging, versioning, automated test suite, and published on PyPI.
+
+<br/>
+
+[![PyPI](https://img.shields.io/pypi/v/reportkit-py?color=3776AB&style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/reportkit-py/)
+![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![OOXML](https://img.shields.io/badge/OOXML-Custom_Pipeline-green?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### ♟️ [TwentyFish](https://github.com/Akay24/Chess-Engine)
+<sub>Calibrated Chess Engine & Analysis Platform</sub>
+
+A high-performance chess application featuring **20 granular difficulty levels**, each calibrated to ~200 Elo intervals using UCI parameter tuning (Skill Level, Depth, Error Rate, and time handicaps) powered by Stockfish compiled to WebAssembly.
+
+* **Non-Blocking Architecture:** Offloads Stockfish WASM execution to dedicated Web Workers, preserving a smooth 60fps UI.
+* **Full Tournament Kit:** Dynamic live evaluation bar, interactive move tree, PGN import/export, and opening book integration.
+* **End-to-End Reliability:** Comprehensive test suite built with Playwright covering move legality and engine responses.
+
+<br/>
+
+![Next.js](https://img.shields.io/badge/Next.js_14-000?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![WASM](https://img.shields.io/badge/Stockfish-WASM-654FF0?style=flat-square&logo=webassembly&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-E2E-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🌐 [SCVRI](https://github.com/Akay24/SCVRI)
 <sub>Supply Chain Visibility & Risk Intelligence</sub>
 
-Enterprise platform that aggregates supplier data, shipment tracking, and external intelligence feeds into a unified risk dashboard. Features ML-driven risk scoring, geospatial supply chain mapping, and a structured alert triage workflow.
+Enterprise platform aggregating global supplier networks, shipment milestones, and external risk feeds into an actionable triage command center. Employs ML scoring models to predict supply chain disruptions before bottlenecks propagate.
 
-> **Architecture:** Microservices (FastAPI) · Next.js frontend · ML risk engine · event-driven design
+* **Microservice Topology:** Decoupled FastAPI backend handling ingestion pipelines and real-time geospatial calculations.
+* **Real-Time Data Tier:** PostgreSQL for relational supplier graphs paired with Redis for low-latency session and alert caching.
+* **Executive Dashboard:** Next.js reactive frontend with interactive geospatial mapping and multi-tier alert triage workflows.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+<br/>
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-
-</td>
-<td width="50%" valign="top">
-
-<h3><a href="https://github.com/Akay24/reportkit-py">reportkit</a></h3>
-
-<sub>HTML → DOCX / PDF with Native Charts</sub>
-
-Python library that transforms HTML content — tables, headings, and Chart.js configs — into Word documents with **editable native Office charts** and high-quality PDF renders. Usable as a library or deployed as a Flask REST API.
-
-> **Why it's interesting:** Charts render as native Office objects in DOCX, not images. CI pipeline, type-safe, tested.
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000?style=flat-square&logo=flask&logoColor=white)
-![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-<h3><a href="https://github.com/Akay24/Chess-Engine">TwentyFish</a></h3>
-
-<sub>Chess Platform with Calibrated Difficulty</sub>
-
-Full-featured chess application with 20 difficulty levels, each calibrated to be ~200 Elo apart using UCI option tuning and time handicaps. Runs Stockfish via WASM in dedicated Web Workers for non-blocking play. Evaluation bar, PGN export, opening book support, and Playwright E2E tests.
-
-> **Architecture:** Next.js 14 · Zustand state · Web Workers · chess.js rules engine
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
-
-</td>
-<td width="50%" valign="top">
-
-<h3><a href="https://github.com/Akay24/vscode-haptic-typing">Haptic Typing</a></h3>
-
-<sub>VS Code Extension — Mechanical Keyboard Audio</sub>
-
-VS Code extension that delivers deep, bass-heavy keystroke audio feedback. Randomized sound variants, special key sounds, paste/formatter suppression, cross-platform native audio — zero runtime npm dependencies.
-
-> **Why it's interesting:** Ships as a real product on the VS Code Marketplace. Handles edge cases like batch edits and auto-formatters cleanly.
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code%20API-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Marketplace](https://img.shields.io/badge/Marketplace-Published-brightgreen?style=flat-square)
 
 </td>
 </tr>
@@ -102,82 +167,56 @@ VS Code extension that delivers deep, bass-heavy keystroke audio feedback. Rando
 
 <br/>
 
-## ◈ Tech Stack
+## ◈ Technical Arsenal
 
-<table>
-<tr>
-<td><b>Languages</b></td>
-<td>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C"/>
-</td>
-</tr>
-<tr>
-<td><b>Backend</b></td>
-<td>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/Express-000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
-  <img src="https://img.shields.io/badge/Flask-000?style=flat-square&logo=flask&logoColor=white" alt="Flask"/>
-</td>
-</tr>
-<tr>
-<td><b>Frontend</b></td>
-<td>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
-</td>
-</tr>
-<tr>
-<td><b>Data</b></td>
-<td>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis"/>
-</td>
-</tr>
-<tr>
-<td><b>Infra</b></td>
-<td>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
-</td>
-</tr>
-<tr>
-<td><b>Testing</b></td>
-<td>
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright"/>
-  <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white" alt="Jest"/>
-  <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="pytest"/>
-</td>
-</tr>
-</table>
+<div align="center">
+
+### AI, Agents & Vector Intelligence
+<img src="https://img.shields.io/badge/LangGraph-000000?style=for-the-badge&logo=diagram-project&logoColor=white" alt="LangGraph"/>
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"/>
+<img src="https://img.shields.io/badge/Amazon_Bedrock-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="Amazon Bedrock"/>
+<img src="https://img.shields.io/badge/Claude-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude"/>
+<img src="https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white" alt="Pinecone"/>
+<img src="https://img.shields.io/badge/RAG_Pipelines-4B32C3?style=for-the-badge&logo=databricks&logoColor=white" alt="RAG"/>
+
+<br/><br/>
+
+### Core Languages & Ecosystem
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=python,js,ts,cpp,c&theme=dark" alt="Languages" />
+</a>
 
 <br/>
 
-## ◈ Engineering Interests
-
-```
-Distributed Systems  ·  Backend Architecture  ·  Event-Driven Design
-Full-Stack Products  ·  AI/ML Systems  ·  Developer Tooling  ·  Chess
-```
+### Backend Frameworks, APIs & Data Stores
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,flask,postgres,mongodb,redis,mysql&theme=dark" alt="Backend & Databases" />
+</a>
 
 <br/>
 
-## ◈ GitHub Activity
+### Cloud Infrastructure, Testing & DevOps
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=aws,docker,jenkins,git,github,postman&theme=dark" alt="Cloud & DevOps" />
+</a>
+
+<br/>
+
+</div>
+
+<br/>
+
+## ◈ System Telemetry & GitHub Analytics
 
 <div align="center">
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=akay24&theme=github_dark" alt="Contribution Graph" width="100%"/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=akay24&theme=github_dark" alt="GitHub Stats" width="32%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=akay24&theme=github_dark" alt="Top Languages by Repo" width="32%"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=akay24&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="32%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=akay24&theme=tokyonight&hide_border=true" alt="Contribution Streak" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=akay24&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="49%"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=akay24&theme=github_dark" alt="Top Languages" width="49%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=akay24&theme=github_dark" alt="GitHub Stats" width="49%"/>
 
 </div>
 
@@ -188,9 +227,10 @@ Full-Stack Products  ·  AI/ML Systems  ·  Developer Tooling  ·  Chess
 <div align="center">
 <sub>
 
-*"The best code is the code that doesn't need to exist. The second best is the code that's obvious."*
+*"Reliability is not an accident of good intentions; it is the deliberate output of verifiable feedback loops."*
 
-Built with caffeine and quiet determination · India 🇮🇳
+<b>Abhijeet Mishra</b> · Software Development Engineer · Bhubaneswar, India 🇮🇳  
+Engineering agentic pipelines, distributed systems, and verifiable software.
 
 </sub>
 </div>
