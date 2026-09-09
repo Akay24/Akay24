@@ -13,29 +13,12 @@
 [![Email](https://img.shields.io/badge/Email-abhijeetmishra2410%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:abhijeetmishra2410@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Akay24-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Akay24)
 
+<br/><br/>
+
+Backend Software Engineer specializing in **agentic AI systems** and **production backend infrastructure**.<br/>
+Architecting multi-agent orchestration pipelines (LangGraph, Amazon Bedrock, Pinecone RAG), shipping high-uptime REST microservices in Python & Node.js on AWS, and publishing open-source developer tooling on PyPI.
+
 </div>
-
-<br/>
-
-```yaml
-$ cat engineer_manifest.yml
-engineer:
-  name: "Abhijeet Mishra"
-  role: "Backend Software Development Engineer"
-  focus: "Agentic AI Systems, Multi-Agent Orchestration & High-Throughput Backends"
-  location: "India 🇮🇳"
-  
-production_impact:
-  - "Engineered multi-agent automation pipelines (Amazon Bedrock, Mistral, Claude, Pinecone RAG)"
-  - "Automated script-to-execution-to-report lifecycles with sandboxed test runs & Playwright telemetry"
-  - "Published author of reportkit-py (open-source HTML/Nunjucks → DOCX/PDF OOXML engine on PyPI)"
-  - "Architected high-uptime REST microservices on AWS (EC2, S3, Lambda) with Docker & Jenkins CI/CD"
-
-core_tenets:
-  - "Deterministic execution over probabilistic guesswork"
-  - "Resilient sandboxing and rigorous verification loops"
-  - "Zero unnecessary runtime dependencies"
-```
 
 <br/>
 
