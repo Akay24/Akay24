@@ -225,6 +225,10 @@ Enterprise platform aggregating global supplier networks, shipment tracking even
 
 <div align="center">
 
+<img src="./assets/wakatime.svg" alt="WakaTime Stats" />
+
+<br/><br/>
+
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=akay24&theme=github_dark" alt="Contribution Graph" width="100%"/>
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=akay24&theme=tokyonight&hide_border=true" alt="Contribution Streak" width="49%"/>

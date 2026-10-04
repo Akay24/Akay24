@@ -1,0 +1,51 @@
+name: WakaTime Realtime Sync
+
+on:
+  schedule:
+    # Runs every 4 hours to keep stats fresh
+    - cron: '0 */4 * * *'
+  workflow_dispatch: # Allows manual trigger from Actions tab
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/generate_wakatime.py'
+      - '.github/workflows/wakatime.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-wakatime:
+    name: Sync WakaTime Stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate WakaTime SVG
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          WAKATIME_RANGE: all_time
+          CARD_TITLE: WakaTime Stats
+          BG_COLOR: '#000000'
+          OUTPUT_PATH: assets/wakatime.svg
+        run: |
+          python3 scripts/generate_wakatime.py
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/wakatime.svg
+          if git diff --staged --quiet; then
+            echo "No changes to WakaTime stats."
+          else
+            git commit -m "telemetry: sync realtime wakatime stats [skip ci]"
+            git push
+          fi
