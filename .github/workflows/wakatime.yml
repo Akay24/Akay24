@@ -28,7 +28,20 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Check WakaTime Secret
+        id: check_secret
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          if [ -z "$WAKATIME_API_KEY" ]; then
+            echo "has_secret=false" >> $GITHUB_OUTPUT
+            echo "::warning title=Missing Secret::WAKATIME_API_KEY is not set in GitHub repository secrets. Add it under Settings > Secrets and variables > Actions to enable real-time sync."
+          else
+            echo "has_secret=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Generate WakaTime SVG
+        if: steps.check_secret.outputs.has_secret == 'true'
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           WAKATIME_RANGE: all_time
@@ -39,6 +52,7 @@ jobs:
           python3 scripts/generate_wakatime.py
 
       - name: Commit & Push Changes
+        if: steps.check_secret.outputs.has_secret == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

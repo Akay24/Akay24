@@ -1,6 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=190&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=c9d1d9&descAlignY=62" alt="Header" width="100%"/>
+<img src="./assets/banner.png" alt="Abhijeet Mishra - Tech Banner" width="100%"/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=100&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=c9d1d9&descAlignY=70">
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=100&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=0d1117&animation=twinkling&fontAlignY=38&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=57606a&descAlignY=70">
+  <img src="https://capsule-render.vercel.app/api?type=transparent&height=100&section=header&text=Abhijeet%20Mishra&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Backend%20SDE%20%7C%20Agentic%20AI%20Systems%20%7C%20Distributed%20Infrastructure&descSize=15&descColor=c9d1d9&descAlignY=70" alt="Abhijeet Mishra" width="100%"/>
+</picture>
 
 <a href="https://readme-typing-svg.demolab.com">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1200&color=58A6FF&center=true&vCenter=true&width=650&lines=Backend+Software+Development+Engineer;Agentic+AI+Pipelines+(LangGraph+%2B+Amazon+Bedrock);Author+of+reportkit-py+(Published+on+PyPI);Building+CodeSentinel+(Autonomous+Coding+Agent);Distributed+Systems+%C2%B7+High-Throughput+APIs" alt="Typing SVG" />

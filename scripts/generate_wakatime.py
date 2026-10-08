@@ -243,8 +243,8 @@ def main():
         if len(sys.argv) > 1:
             api_key = sys.argv[1].strip()
         else:
-            print("Error: WAKATIME_API_KEY environment variable not set.", file=sys.stderr)
-            sys.exit(1)
+            print("Notice: WAKATIME_API_KEY environment variable not set. Skipping stats generation.", file=sys.stderr)
+            sys.exit(0)
 
     time_range = os.environ.get("WAKATIME_RANGE", "all_time")
     output_path = os.environ.get("OUTPUT_PATH", "assets/wakatime.svg")
