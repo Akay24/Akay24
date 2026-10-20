@@ -121,6 +121,32 @@ def collect_events_from_transcripts(brain_dir="~/.gemini/antigravity-ide/brain")
     print(f"Parsed {len(raw_events)} raw coding events from transcripts.")
     return raw_events
 
+def collect_events_from_local_history(history_dir="~/Library/Application Support/Antigravity IDE/User/History"):
+    history_dir = os.path.expanduser(history_dir)
+    pattern = os.path.join(history_dir, "*", "entries.json")
+    files = glob.glob(pattern)
+    events = []
+    import urllib.parse
+    for hf in files:
+        try:
+            with open(hf, "r", encoding="utf-8") as f:
+                d = json.load(f)
+                uri = d.get("resource", "")
+                if uri.startswith("file://"):
+                    fpath = urllib.parse.unquote(uri[7:])
+                else:
+                    fpath = uri
+                for entry in d.get("entries", []):
+                    ts_ms = entry.get("timestamp")
+                    if ts_ms and "/" in fpath and not fpath.startswith("/tmp"):
+                        dt = datetime.fromtimestamp(ts_ms / 1000.0)
+                        iso_ts = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+                        events.append((iso_ts, fpath, True))
+        except Exception:
+            continue
+    print(f"Parsed {len(events)} file save events from Antigravity IDE User/History.")
+    return events
+
 def deduplicate_heartbeats(raw_events, interval_seconds=120):
     """Group events into discrete heartbeat buckets (default 1 per 2 minutes per file)."""
     raw_events.sort(key=lambda x: x[0])
@@ -198,6 +224,7 @@ def main():
 
     print(f"Using WakaTime API key: {api_key[:8]}...{api_key[-4:]}")
     raw_events = collect_events_from_transcripts()
+    raw_events += collect_events_from_local_history()
     if not raw_events:
         print("No events found to backfill.")
         return
