@@ -91,6 +91,25 @@ def fetch_wakatime_stats(api_key, time_range="all_time"):
             raise ValueError(f"Unexpected WakaTime API response: {data}")
         return data["data"]
 
+def fetch_all_time_total(api_key):
+    """Fetch real-time total time from all_time_since_today."""
+    ctx = ssl._create_unverified_context()
+    url = "https://wakatime.com/api/v1/users/current/all_time_since_today"
+    auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "WakaTime-SVG-Generator/1.0",
+            "Authorization": auth_header,
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10, context=ctx) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            return data.get("data", {}).get("text", "")
+    except Exception:
+        return ""
+
 def format_time_text(lang):
     """Format time string like '1,250 hrs 36 mins', '52 hrs 9 mins', '49 mins'."""
     hours = lang.get("hours", 0)
@@ -106,7 +125,7 @@ def format_time_text(lang):
         return "0 mins"
     return " ".join(parts)
 
-def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", bg_color="#000000"):
+def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", bg_color="#000000", total_time=""):
     """Generate exact compact layout WakaTime SVG matching the midnight-purple theme."""
     raw_languages = stats.get("languages", [])
     
@@ -178,6 +197,8 @@ def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", b
     </g>'''
         lang_items.append(item_svg)
 
+    total_tag = f'<text x="{progress_bar_width}" y="0" text-anchor="end" class="total-time">{total_time}</text>' if total_time else ''
+
     svg_content = f'''<svg
   width="{card_width}"
   height="{card_height}"
@@ -193,6 +214,10 @@ def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", b
       font: 700 18px 'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, Sans-Serif;
       fill: #9745f5;
       animation: fadeInAnimation 0.8s ease-in-out forwards;
+    }}
+    .total-time {{
+      font: 600 12px 'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, Sans-Serif;
+      fill: #8b949e;
     }}
     .lang-name {{
       font: 400 11px 'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, Sans-Serif;
@@ -223,9 +248,10 @@ def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", b
     stroke="{bg_color}"
   />
 
-  <!-- Card Title -->
+  <!-- Card Title & Total Time -->
   <g data-testid="card-title" transform="translate(25, 35)">
     <text x="0" y="0" class="header" data-testid="header">{title}</text>
+    {total_tag}
   </g>
 
   <!-- Main Card Body -->
@@ -262,11 +288,14 @@ def main():
     print(f"Fetching WakaTime stats (range: {time_range})...")
     stats = fetch_wakatime_stats(api_key, time_range=time_range)
 
+    print("Fetching real-time total coding time...")
+    total_time = fetch_all_time_total(api_key) or stats.get("human_readable_total", "")
+
     print("Loading language colors...")
     colors = get_language_colors()
 
-    print("Generating SVG card...")
-    svg = generate_svg(stats, colors, title=title, bg_color=bg_color)
+    print(f"Generating SVG card (Total: {total_time})...")
+    svg = generate_svg(stats, colors, title=title, bg_color=bg_color, total_time=total_time)
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
