@@ -142,7 +142,7 @@ def deduplicate_heartbeats(raw_events, interval_seconds=120):
                     "is_write": is_write,
                     "project": guess_project(fpath),
                     "language": guess_language(fpath),
-                    "plugin": "Antigravity IDE/1.10 wakatime.vscode-wakatime/30.2.1",
+                    "plugin": "antigravityide/1.107.0 vscode-wakatime/30.2.1",
                 }
             elif is_write:
                 buckets[bucket_key]["is_write"] = True
@@ -171,7 +171,7 @@ def send_heartbeats_bulk(heartbeats, api_key, batch_size=50):
             headers={
                 "Authorization": auth_header,
                 "Content-Type": "application/json",
-                "User-Agent": "wakatime/v1.104.0",
+                "User-Agent": "wakatime/v2.27.13 (darwin-27.0.0-arm64) go1.27.2 antigravityide/1.107.0 vscode-wakatime/30.2.1",
             },
         )
         try:
