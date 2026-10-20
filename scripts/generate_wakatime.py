@@ -3,10 +3,11 @@
 Generate a real-time WakaTime Stats SVG card matching the compact midnight-purple theme.
 """
 
-import os
-import sys
+import base64
 import json
+import os
 import ssl
+import sys
 import urllib.request
 
 # Fallback language color palette (GitHub Linguist standard colors)
@@ -75,8 +76,15 @@ def get_language_colors():
 def fetch_wakatime_stats(api_key, time_range="all_time"):
     """Fetch user stats from WakaTime API."""
     ctx = ssl._create_unverified_context()
-    url = f"https://wakatime.com/api/v1/users/current/stats/{time_range}?api_key={api_key}"
-    req = urllib.request.Request(url, headers={"User-Agent": "WakaTime-SVG-Generator/1.0"})
+    url = f"https://wakatime.com/api/v1/users/current/stats/{time_range}"
+    auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "WakaTime-SVG-Generator/1.0",
+            "Authorization": auth_header,
+        },
+    )
     with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
         data = json.loads(resp.read().decode("utf-8"))
         if "data" not in data:
