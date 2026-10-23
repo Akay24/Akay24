@@ -50,7 +50,7 @@
   <!-- Card Title & Total Time -->
   <g data-testid="card-title" transform="translate(25, 35)">
     <text x="0" y="0" class="header" data-testid="header">WakaTime Stats</text>
-    <text x="445" y="0" text-anchor="end" class="total-time">252 hrs 31 mins</text>
+    <text x="445" y="0" text-anchor="end" class="total-time">252 hrs 58 mins</text>
   </g>
 
   <!-- Main Card Body -->
