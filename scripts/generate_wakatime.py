@@ -8,6 +8,8 @@ import json
 import os
 import ssl
 import sys
+import time
+import urllib.error
 import urllib.request
 
 # Fallback language color palette (GitHub Linguist standard colors)
@@ -73,41 +75,70 @@ def get_language_colors():
         print(f"Notice: Using bundled language color map ({e})", file=sys.stderr)
     return colors
 
+def _get_auth_headers(token):
+    """Generate appropriate authorization headers for API key or OAuth token."""
+    token = token.strip()
+    if token.startswith("Bearer "):
+        auth_header = token
+    elif token.startswith("waka_tok_") or token.startswith("sec_"):
+        auth_header = f"Bearer {token}"
+    else:
+        # Standard WakaTime auth (works for both API keys like waka_... and OAuth tokens)
+        auth_header = "Basic " + base64.b64encode(token.encode("utf-8")).decode("utf-8")
+    return {
+        "User-Agent": "WakaTime-SVG-Generator/1.0",
+        "Authorization": auth_header,
+    }
+
+def _fetch_url_with_retry(req, timeout=35, max_retries=3, backoff=3, context=None):
+    """Fetch URL with retries for handling timeouts and transient network errors."""
+    last_err = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=context) as resp:
+                # 202 Accepted indicates WakaTime is still calculating stats in the background
+                if getattr(resp, "status", None) == 202:
+                    if attempt < max_retries:
+                        print(f"Notice: Stats are still computing (HTTP 202). Retrying in {backoff * attempt}s...", file=sys.stderr)
+                        time.sleep(backoff * attempt)
+                        continue
+                return json.loads(resp.read().decode("utf-8"))
+        except (TimeoutError, urllib.error.URLError) as e:
+            last_err = e
+            if attempt < max_retries:
+                print(f"Warning: WakaTime request attempt {attempt} failed ({e}). Retrying in {backoff * attempt}s...", file=sys.stderr)
+                time.sleep(backoff * attempt)
+            else:
+                raise
+    if last_err:
+        raise last_err
+
 def fetch_wakatime_stats(api_key, time_range="all_time"):
     """Fetch user stats from WakaTime API."""
     ctx = ssl._create_unverified_context()
     url = f"https://wakatime.com/api/v1/users/current/stats/{time_range}"
-    auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
     req = urllib.request.Request(
         url,
-        headers={
-            "User-Agent": "WakaTime-SVG-Generator/1.0",
-            "Authorization": auth_header,
-        },
+        headers=_get_auth_headers(api_key),
     )
-    with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-        if "data" not in data:
-            raise ValueError(f"Unexpected WakaTime API response: {data}")
-        return data["data"]
+    data = _fetch_url_with_retry(req, timeout=35, max_retries=3, backoff=4, context=ctx)
+    if "data" not in data:
+        raise ValueError(f"Unexpected WakaTime API response: {data}")
+    return data["data"]
 
 def fetch_all_time_total(api_key):
     """Fetch real-time total time from all_time_since_today."""
     ctx = ssl._create_unverified_context()
     url = "https://wakatime.com/api/v1/users/current/all_time_since_today"
-    auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
     req = urllib.request.Request(
         url,
-        headers={
-            "User-Agent": "WakaTime-SVG-Generator/1.0",
-            "Authorization": auth_header,
-        },
+        headers=_get_auth_headers(api_key),
     )
     try:
-        with urllib.request.urlopen(req, timeout=10, context=ctx) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data.get("data", {}).get("text", "")
-    except Exception:
+        data = _fetch_url_with_retry(req, timeout=15, max_retries=2, backoff=2, context=ctx)
+        return data.get("data", {}).get("text", "")
+    except Exception as e:
+        print(f"Notice: Could not fetch real-time total time ({e})", file=sys.stderr)
         return ""
 
 def format_time_text(lang):
@@ -271,14 +302,33 @@ def generate_svg(stats, lang_colors, max_languages=60, title="WakaTime Stats", b
 '''
     return svg_content
 
+def get_token():
+    """Retrieve API key or OAuth token from env, args, or ~/.wakatime.cfg."""
+    token = (
+        os.environ.get("WAKATIME_TOKEN", "").strip()
+        or os.environ.get("WAKATIME_API_KEY", "").strip()
+    )
+    if not token and len(sys.argv) > 1:
+        token = sys.argv[1].strip()
+
+    if not token:
+        cfg_path = os.path.expanduser("~/.wakatime.cfg")
+        if os.path.exists(cfg_path):
+            try:
+                with open(cfg_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if "api_key" in line and "=" in line:
+                            token = line.split("=")[1].strip()
+                            break
+            except Exception:
+                pass
+    return token
+
 def main():
-    api_key = os.environ.get("WAKATIME_API_KEY", "").strip()
+    api_key = get_token()
     if not api_key:
-        if len(sys.argv) > 1:
-            api_key = sys.argv[1].strip()
-        else:
-            print("Notice: WAKATIME_API_KEY environment variable not set. Skipping stats generation.", file=sys.stderr)
-            sys.exit(0)
+        print("Notice: Neither WAKATIME_TOKEN nor WAKATIME_API_KEY is available. Skipping stats generation.", file=sys.stderr)
+        sys.exit(0)
 
     time_range = os.environ.get("WAKATIME_RANGE", "all_time")
     output_path = os.environ.get("OUTPUT_PATH", "assets/wakatime.svg")
@@ -286,7 +336,14 @@ def main():
     bg_color = os.environ.get("BG_COLOR", "#000000")
 
     print(f"Fetching WakaTime stats (range: {time_range})...")
-    stats = fetch_wakatime_stats(api_key, time_range=time_range)
+    try:
+        stats = fetch_wakatime_stats(api_key, time_range=time_range)
+    except Exception as e:
+        print(f"Error fetching WakaTime stats: {e}", file=sys.stderr)
+        if os.path.exists(output_path):
+            print(f"Notice: Keeping existing {output_path} to prevent breaking display.", file=sys.stderr)
+            sys.exit(0)
+        raise
 
     print("Fetching real-time total coding time...")
     total_time = fetch_all_time_total(api_key) or stats.get("human_readable_total", "")
