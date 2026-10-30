@@ -64,7 +64,10 @@ def guess_project(file_path):
     return "Antigravity Workspace"
 
 def get_api_key():
-    key = os.environ.get("WAKATIME_API_KEY", "").strip()
+    key = (
+        os.environ.get("WAKATIME_TOKEN", "").strip()
+        or os.environ.get("WAKATIME_API_KEY", "").strip()
+    )
     if not key:
         cfg_path = os.path.expanduser("~/.wakatime.cfg")
         if os.path.exists(cfg_path):
@@ -181,7 +184,13 @@ def deduplicate_heartbeats(raw_events, interval_seconds=120):
 
 def send_heartbeats_bulk(heartbeats, api_key, batch_size=50):
     ctx = ssl._create_unverified_context()
-    auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
+    api_key = api_key.strip()
+    if api_key.startswith("Bearer "):
+        auth_header = api_key
+    elif api_key.startswith("waka_tok_") or api_key.startswith("sec_"):
+        auth_header = f"Bearer {api_key}"
+    else:
+        auth_header = "Basic " + base64.b64encode(api_key.encode("utf-8")).decode("utf-8")
     url = "https://wakatime.com/api/v1/users/current/heartbeats.bulk"
 
     total = len(heartbeats)
